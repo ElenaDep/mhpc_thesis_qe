@@ -1,0 +1,6 @@
+#Test on parallel behavoiur
+#np	tCPU		tWALL
+2	2h 7m		1h13m
+4	55m15.10	7m35.01s 
+8	36m55.09	9m57.82s
+16	12m41.19	7m 4.09s
