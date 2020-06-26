@@ -70,7 +70,7 @@ with n=1, 2, 4, 8, 16, 32
 
 For this test, as the WALL time was quite significative i set to 1 the iteration number in the input file, so it runs for just one iteration.
 
-<img src="plot_intranode.png" style="zoom:67%;" />
+<img src="plot_intranode_david.png" style="zoom:67%;" />
 
 **Internode test**
 
@@ -90,4 +90,13 @@ In this case as the WALL time was quite short,  the simulation run for two inter
 
 **intranode**
 
+<img src="plot_intranode.png" style="zoom:67%;" />
+
+
+
+
+
+**internode**
+
 <img src="plot_internode.png" style="zoom:67%;" />
+
