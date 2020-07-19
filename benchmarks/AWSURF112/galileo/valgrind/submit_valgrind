@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -J rmmAu
+#SBATCH --time=01:00:00
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=2
+#SBATCH --ntasks-per-socket=1
+#SBATCH --cpus-per-task=18
+#SBATCH -A cin_QEdevel1_2  
+#SBATCH --partition=gll_usr_prod 
+#SBATCH -o std.%j.out 
+#SBATCH -e std.%j.err
+
+source /galileo/home/userexternal/edepaol1/modules
+
+cd /galileo/home/userexternal/edepaol1/AWSURF112
+
+export OMP_NUM_THREADS=1
+
+valgrind --log-file=valgrind_rmm_1nd_10it mpirun -np 36 /galileo/home/userexternal/edepaol1/rmm/q-e/PW/src/pw.x -inp ausurf_rmm_10it.in > ausurfout_rmm_1nd_10it

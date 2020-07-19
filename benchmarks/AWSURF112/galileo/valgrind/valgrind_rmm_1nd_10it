@@ -1,0 +1,51 @@
+==43186== Memcheck, a memory error detector
+==43186== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==43186== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info
+==43186== Command: /cineca/prod/opt/compilers/intel/pe-xe-2018/binary/impi/2018.4.274/bin64/mpirun -np 36 /galileo/home/userexternal/edepaol1/rmm/q-e/PW/src/pw.x -inp ausurf_rmm_10it.in
+==43186== Parent PID: 43160
+==43186== 
+==43188== 
+==43188== HEAP SUMMARY:
+==43188==     in use at exit: 68,319 bytes in 1,482 blocks
+==43188==   total heap usage: 2,056 allocs, 574 frees, 109,724 bytes allocated
+==43188== 
+==43188== LEAK SUMMARY:
+==43188==    definitely lost: 0 bytes in 0 blocks
+==43188==    indirectly lost: 0 bytes in 0 blocks
+==43188==      possibly lost: 0 bytes in 0 blocks
+==43188==    still reachable: 68,319 bytes in 1,482 blocks
+==43188==         suppressed: 0 bytes in 0 blocks
+==43188== Rerun with --leak-check=full to see details of leaked memory
+==43188== 
+==43188== For counts of detected and suppressed errors, rerun with: -v
+==43188== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==44187== 
+==44187== HEAP SUMMARY:
+==44187==     in use at exit: 70,609 bytes in 1,567 blocks
+==44187==   total heap usage: 3,794 allocs, 2,227 frees, 168,158 bytes allocated
+==44187== 
+==44187== LEAK SUMMARY:
+==44187==    definitely lost: 10 bytes in 1 blocks
+==44187==    indirectly lost: 0 bytes in 0 blocks
+==44187==      possibly lost: 0 bytes in 0 blocks
+==44187==    still reachable: 70,599 bytes in 1,566 blocks
+==44187==         suppressed: 0 bytes in 0 blocks
+==44187== Rerun with --leak-check=full to see details of leaked memory
+==44187== 
+==44187== For counts of detected and suppressed errors, rerun with: -v
+==44187== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==43186== 
+==43186== HEAP SUMMARY:
+==43186==     in use at exit: 73,920 bytes in 1,548 blocks
+==43186==   total heap usage: 4,031 allocs, 2,483 frees, 172,142 bytes allocated
+==43186== 
+==43186== LEAK SUMMARY:
+==43186==    definitely lost: 0 bytes in 0 blocks
+==43186==    indirectly lost: 0 bytes in 0 blocks
+==43186==      possibly lost: 0 bytes in 0 blocks
+==43186==    still reachable: 73,920 bytes in 1,548 blocks
+==43186==         suppressed: 0 bytes in 0 blocks
+==43186== Rerun with --leak-check=full to see details of leaked memory
+==43186== 
+==43186== For counts of detected and suppressed errors, rerun with: -v
+==43186== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
