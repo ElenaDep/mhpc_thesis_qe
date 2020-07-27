@@ -17,7 +17,7 @@ And i compile with intel compiler. loading the following modules:
  4) scalapack/2.0.2--intelmpi--2018--binary 
 ```
 
-### Ausurf benchmark: MPI scaling , 10 iterations
+### MPI scaling , 10 iterations
 
 In this section a report  the analysis on the MPI-scaling of the two algorithms when i increased the number of nodes and of processors (36*n_node ).
 
@@ -40,7 +40,7 @@ displayed on the graph. By default this value is set to **10%**.
 
 ![](galileo/ausurf_internode_10it/MPI_scaling_ausurf-output_rmm-diis.png)
 
-### Ausurf benchmark: MPI scaling , convergence test
+### Convergence test
 
  I used the input file of the ausurf benchmark where i change the `electron_maxstep=1000`,  to be sure to not limited the number of steps before the algorithm stop as they arrive at the convergence. 
 
@@ -48,29 +48,54 @@ I run the simulations with :
 
 - 1 node , 36 processes, 1 OMP thread 
 
-| ALGORITHM | CPU_TIME  | WALL_TIME | Total energy       |
-| --------- | --------- | --------- | ------------------ |
-| DAVIDSON  | 17m24.47s | 18m46.87s | -11427.09402162 Ry |
-| RMM-DIIS  | 12m49.36s | 13m51.65s | -11427.09402145 Ry |
+| ALGORITHM | CPU_TIME  | WALL_TIME | Total energy       | #of iterations |
+| --------- | --------- | --------- | ------------------ | -------------- |
+| DAVIDSON  | 15m15.04s | 16m37.67s | -11427.09402151 Ry | 22             |
+| RMM-DIIS  | 12m49.36s | 13m51.65s | -11427.09402088 Ry | 22             |
 
 
 
 - 2 nodes,  72 processes, 1 OMP thread
 
-| ALGORITHM | CPU_TIME | WALL_TIME | Total energy    |
-| --------- | -------- | --------- | --------------- |
-| DAVIDSON  |          |           |                 |
-| RMM-DIIS  | 8m 1.42s | 9m 0.01s  | -11427.09402106 |
+| ALGORITHM | CPU_TIME | WALL_TIME | Total energy    | #of iterations |
+| --------- | -------- | --------- | --------------- | -------------- |
+| DAVIDSON  | 9m 7.05s | 11m 8.92s | -11427.09402124 | 21             |
+| RMM-DIIS  | 8m 1.42s | 9m 0.01s  | -11427.09402106 | 22             |
 
 
 
-#### APS report
+- 4 nodes,  144 processes, 1 OMP thread
+
+| ALGORITHM | CPU_TIME | WALL_TIME | Total energy    | #of iterations |
+| --------- | -------- | --------- | --------------- | -------------- |
+| DAVIDSON  | 7m43.79s | 8m50.93s  | -11427.09402100 | 21             |
+| RMM-DIIS  | 9m 1.55s | 9m59.13s  | -11427.09402140 | 22             |
+
+
+
+- 8 nodes,  288 processes, 1 OMP thread
+
+| ALGORITHM | CPU_TIME | WALL_TIME | Total energy    | #of iterations |
+| --------- | -------- | --------- | --------------- | -------------- |
+| DAVIDSON  | 6m 5.09s | 7m15.96s  | -11427.09402122 | 21             |
+| RMM-DIIS  | 3m38.36s | 4m38.81s  | -11427.09402120 | 23             |
+
+
+
+- 16 nodes,  576 processes, 1 OMP thread
+
+| ALGORITHM | CPU_TIME | WALL_TIME | Total energy    | #of iterations |
+| --------- | -------- | --------- | --------------- | -------------- |
+| DAVIDSON  | 5m33.78s | 6m43.58s  | -11427.09402111 | 21             |
+| RMM-DIIS  | 5m 8.57s | 6m10.67s  | -11427.09402151 | 24             |
+
+### APS report
 
 I repeat the run on 1 node using the profiling tool of APS (Application Performance Snapshot), these are the report that i obtained.
 
 ##### Davidson
 
-![aps-report_ausurf-output_rmm_1nd_convergence](galileo/aps/aps-report_ausurf-output_dav_1nd_convergence.png)
+##### <img src="galileo/aps/aps-report_ausurf-output_dav_1nd_convergence.png" alt="aps-report_ausurf-output_rmm_1nd_convergence" style="zoom:200%;" />
 
 
 
